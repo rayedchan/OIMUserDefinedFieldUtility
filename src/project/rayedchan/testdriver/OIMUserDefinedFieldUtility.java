@@ -1,5 +1,10 @@
 package project.rayedchan.testdriver;
 
+import Thor.API.Exceptions.tcAPIException;
+import Thor.API.Exceptions.tcColumnNotFoundException;
+import Thor.API.Exceptions.tcInvalidLookupException;
+import Thor.API.Operations.tcLookupOperationsIntf;
+import Thor.API.tcResultSet;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -26,6 +31,9 @@ import project.rayedchan.utilities.UDFUtility;
 /**
  *
  * @author rayedchan
+ * This utility does not support creation of encrypted UDFs.
+ * OIM does not allow you to export encrypted UDFs.
+ * TODO: Handle special case with lookup UDF with no entries in lookup
  */
 public class OIMUserDefinedFieldUtility 
 {
@@ -37,13 +45,13 @@ public class OIMUserDefinedFieldUtility
     public static final String OIM_CLIENT_HOME = "/home/oracle/Desktop/oimclient";
     public static final String AUTHWL_PATH = OIM_CLIENT_HOME + "/conf/authwl.conf";
     
-    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException 
+    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcAPIException, tcInvalidLookupException, tcColumnNotFoundException 
     {
         OIMClient oimClient = null;
+        tcLookupOperationsIntf lookupOps = null;
         
         try
         {
-            /*
             // Set system properties required for OIMClient
             System.setProperty("java.security.auth.login.config", AUTHWL_PATH);
             System.setProperty("APPSERVER_TYPE", "wls");  
@@ -57,13 +65,17 @@ public class OIMUserDefinedFieldUtility
             // Log in to OIM with the approriate credentials
             oimClient.login(OIM_USERNAME, OIM_PASSWORD.toCharArray());
  
-            // Lookup a service
-            UserManager usermgr = oimClient.getService(UserManager.class);
-   
+            // OIM API services
+            //UserManager usermgr = oimClient.getService(UserManager.class);
+            lookupOps = oimClient.getService(tcLookupOperationsIntf.class);
+            String lookupName = "Lookup.LDAP.Students.OU.ProvAttrMap";
+            //tcResultSet entries = lookupOps.getLookupValues("Lookup.LDAP.Students.OU.ProvAttrMap");
+            //UDFUtility.printTcResultSetRecords(entries);
+            System.out.println(UDFUtility.getLookupEntries(lookupOps, lookupName));
+            
             // Call a method from a service
-            List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
-            System.out.println(users);-
-            */
+            //List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
+            //System.out.println(users);
             
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dbf.newDocumentBuilder();
@@ -139,6 +151,9 @@ public class OIMUserDefinedFieldUtility
             
         finally
         {
+            if(lookupOps != null)
+                lookupOps.close();
+            
             // Logout user from OIMClient
             if(oimClient != null)
                 oimClient.logout();

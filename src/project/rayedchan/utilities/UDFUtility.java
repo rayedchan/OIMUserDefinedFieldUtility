@@ -1,6 +1,12 @@
 package project.rayedchan.utilities;
 
+import Thor.API.Exceptions.tcAPIException;
+import Thor.API.Exceptions.tcColumnNotFoundException;
+import Thor.API.Exceptions.tcInvalidLookupException;
+import Thor.API.Operations.tcLookupOperationsIntf;
+import Thor.API.tcResultSet;
 import java.io.StringWriter;
+import java.util.HashMap;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -51,7 +57,7 @@ public class UDFUtility
         String  backendName = attrObj.getBackendName();
         boolean isSearchable = attrObj.isSearchable();
         String  category = attrObj.getCategory();
-        
+       
         // Locate proper level to add the new Attribute Definition into the xml
         XPathFactory xPathFactory = XPathFactory.newInstance();
         XPath xpath = xPathFactory.newXPath();
@@ -156,6 +162,49 @@ public class UDFUtility
         transformer.transform(new DOMSource(document), new StreamResult(output));
         String newObjectResourceXML = output.toString();
         return newObjectResourceXML;
+    }
+        
+    /*
+     * Prints the records of a tcResultSet.
+     * @param   tcResultSetObj  tcResultSetObject
+     */
+    public static void printTcResultSetRecords(tcResultSet tcResultSetObj) throws tcAPIException, tcColumnNotFoundException
+    {
+        String[] columnNames = tcResultSetObj.getColumnNames();
+        int numRows = tcResultSetObj.getTotalRowCount();
+        
+        for(int i = 0; i < numRows; i++)
+        {
+            tcResultSetObj.goToRow(i);
+            for(String columnName: columnNames)
+            {
+                System.out.println(columnName + " = " + tcResultSetObj.getStringValue(columnName));
+            }
+            System.out.println();
+        }
+    }
+    
+    /*
+     * Gets the entries from a lookup definition
+     * @param   lookupOps         Service class for lookup operations
+     * @param   lookupDefName   Name of lookup definition
+     * @return  HashMap object where the key = code key and value = decode of a lookup entry
+     */
+    public static HashMap<String,String> getLookupEntries(tcLookupOperationsIntf lookupOps, String lookupDefName) throws tcAPIException, tcInvalidLookupException, tcColumnNotFoundException
+    {
+        HashMap<String, String> entries = new HashMap<String,String>(); // Data structure to store code and decode of the entries in a lookup
+        tcResultSet tcResultSetObj = lookupOps.getLookupValues(lookupDefName); // Get lookup entries as a result set
+        int numRows = tcResultSetObj.getTotalRowCount();
+        
+        for(int i = 0; i < numRows; i++)
+        {
+            tcResultSetObj.goToRow(i); // Move pointer to next record
+            String codeKey = tcResultSetObj.getStringValue("Lookup Definition.Lookup Code Information.Code Key");
+            String decode = tcResultSetObj.getStringValue("Lookup Definition.Lookup Code Information.Decode");
+            entries.put(codeKey, decode);
+        }
+       
+        return entries;
     }
     
 }
