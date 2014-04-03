@@ -1,5 +1,12 @@
 package project.rayedchan.utilities;
 
+import java.io.StringWriter;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
@@ -104,9 +111,9 @@ public class UDFUtility
         
         // Set properties of child elements if any       
         sourcescopeTag.setAttribute("type", "CategoryDefinition"); 
-        sourcescopeTag.setAttribute("name", "Basic User Information");
+        sourcescopeTag.setAttribute("name", category);
         sourcescopeTag.setAttribute("subtype", "User Metadata");
-        categoryTag.setAttribute("CategoryDefinition", "Basic User Information");
+        categoryTag.setAttribute("CategoryDefinition", category);
         
         // Add child elements to parent element     
         attrDef.appendChild(visibleTag);
@@ -134,6 +141,21 @@ public class UDFUtility
         // Get root node and add the new Attribute Defintion to it
         Node rootNode = nodes.item(0); 
         rootNode.appendChild(attrDef); 
+    }
+    
+    /*
+     * Converts a Document into String representation
+     * UTF-8 conversion
+     * @param   document    Document object to be parsed
+     * @return  String representation of xml content
+     */
+    public static String parseDocumentIntoStringXML(Document document) throws TransformerConfigurationException, TransformerException
+    {
+        StringWriter output = new StringWriter();
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.transform(new DOMSource(document), new StreamResult(output));
+        String newObjectResourceXML = output.toString();
+        return newObjectResourceXML;
     }
     
 }
