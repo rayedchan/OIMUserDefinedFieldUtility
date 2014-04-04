@@ -7,6 +7,7 @@ import Thor.API.Operations.tcLookupOperationsIntf;
 import Thor.API.tcResultSet;
 import java.io.StringWriter;
 import java.util.HashMap;
+import java.util.Map;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -22,6 +23,7 @@ import oracle.iam.configservice.vo.AttributeDefinition;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import oracle.iam.configservice.api.Constants;
 
 /**
  * @author rayedchan
@@ -56,7 +58,9 @@ public class UDFUtility
         boolean isMLS = attrObj.isMLS();
         String  backendName = attrObj.getBackendName();
         boolean isSearchable = attrObj.isSearchable();
-        String  category = attrObj.getCategory();
+        String category = attrObj.getCategory();
+        String lookupCode = attrObj.getLookupCode(); // Lookup Definition Name
+        Map<String, String> possibleValues = attrObj.getPossibleValues();
        
         // Locate proper level to add the new Attribute Definition into the xml
         XPathFactory xPathFactory = XPathFactory.newInstance();
@@ -70,6 +74,37 @@ public class UDFUtility
         attrDef.setAttribute("repo-type", "API"); 
         attrDef.setAttribute("name", api_name);
         attrDef.setAttribute("subtype", "User Metadata");
+        
+        // Special case: Additonal XML elements to handle UDF of type LOV
+        boolean isListOfValuesType = Constants.DisplayType.LOV.name().equals(displayType);
+        if(isListOfValuesType)
+        {
+            Element possibleValuesTag = document.createElement("possibleValues"); // Wrapper for all entries
+            
+            // Iterate each entry defined in lookup definition
+            for(Map.Entry<String,String> entry: possibleValues.entrySet())
+            {
+                String codeKey = entry.getKey();
+                String decode = entry.getValue();
+                Element possibleValueTag = document.createElement("possibleValue");
+                Element codeTag = document.createElement("code");
+                Element meaningTag = document.createElement("meaning");
+                
+                // Set values for nested elements (A lookup entry)
+                codeTag.setTextContent(codeKey);
+                meaningTag.setTextContent(decode);
+                
+                // Nest entry tags into possibleValueTag
+                possibleValueTag.appendChild(codeTag);
+                possibleValueTag.appendChild(meaningTag);
+                
+                // Nest possibleValueTag into possibleValuesTag
+                possibleValuesTag.appendChild(possibleValueTag);
+            }
+            
+            // Nest to AttributeDefinition Tag
+            attrDef.appendChild(possibleValuesTag);
+        }
         
         // Child Elements
         Element visibleTag = document.createElement("visible");
@@ -91,6 +126,7 @@ public class UDFUtility
         Element mLSTag = document.createElement("MLS");
         Element backendNameTag = document.createElement("backendName");
         Element searchableTag = document.createElement("searchable");
+        Element lookupCodeTag = document.createElement("lookupCode");
         Element sourcescopeTag = document.createElement("source-scope");
         Element categoryTag = document.createElement("category");
         
@@ -113,6 +149,7 @@ public class UDFUtility
         bulkUpdatableTag.setTextContent(String.valueOf(isBulkUpdatable));
         mLSTag.setTextContent(String.valueOf(isMLS));
         backendNameTag.setTextContent(backendName);
+        lookupCodeTag.setTextContent(lookupCode);
         searchableTag.setTextContent(String.valueOf(isSearchable));
         
         // Set properties of child elements if any       
@@ -140,6 +177,7 @@ public class UDFUtility
         attrDef.appendChild(bulkUpdatableTag);
         attrDef.appendChild(mLSTag);
         attrDef.appendChild(backendNameTag);
+        if(isListOfValuesType){attrDef.appendChild(lookupCodeTag);} // Preserve order of elements in XML
         attrDef.appendChild(searchableTag);
         attrDef.appendChild(sourcescopeTag);
         attrDef.appendChild(categoryTag);
@@ -190,12 +228,12 @@ public class UDFUtility
      * @param   lookupDefName   Name of lookup definition
      * @return  HashMap object where the key = code key and value = decode of a lookup entry
      */
-    public static HashMap<String,String> getLookupEntries(tcLookupOperationsIntf lookupOps, String lookupDefName) throws tcAPIException, tcInvalidLookupException, tcColumnNotFoundException
+    public static Map<String,String> getLookupEntries(tcLookupOperationsIntf lookupOps, String lookupDefName) throws tcAPIException, tcInvalidLookupException, tcColumnNotFoundException
     {
-        HashMap<String, String> entries = new HashMap<String,String>(); // Data structure to store code and decode of the entries in a lookup
+        Map<String, String> entries = new HashMap<String,String>(); // Data structure to store code and decode of the entries in a lookup
         tcResultSet tcResultSetObj = lookupOps.getLookupValues(lookupDefName); // Get lookup entries as a result set
         int numRows = tcResultSetObj.getTotalRowCount();
-        
+
         for(int i = 0; i < numRows; i++)
         {
             tcResultSetObj.goToRow(i); // Move pointer to next record
@@ -206,5 +244,4 @@ public class UDFUtility
        
         return entries;
     }
-    
 }

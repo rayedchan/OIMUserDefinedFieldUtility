@@ -5,10 +5,7 @@ import Thor.API.Exceptions.tcColumnNotFoundException;
 import Thor.API.Exceptions.tcInvalidLookupException;
 import Thor.API.Operations.tcLookupOperationsIntf;
 import Thor.API.tcResultSet;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.List;
+import java.util.*;
 import javax.security.auth.login.LoginException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -69,9 +66,7 @@ public class OIMUserDefinedFieldUtility
             //UserManager usermgr = oimClient.getService(UserManager.class);
             lookupOps = oimClient.getService(tcLookupOperationsIntf.class);
             String lookupName = "Lookup.LDAP.Students.OU.ProvAttrMap";
-            //tcResultSet entries = lookupOps.getLookupValues("Lookup.LDAP.Students.OU.ProvAttrMap");
-            //UDFUtility.printTcResultSetRecords(entries);
-            System.out.println(UDFUtility.getLookupEntries(lookupOps, lookupName));
+            Map entries = UDFUtility.getLookupEntries(lookupOps, lookupName);
             
             // Call a method from a service
             //List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
@@ -112,13 +107,15 @@ public class OIMUserDefinedFieldUtility
             boolean isMultiValued = false;
             boolean isUserSearchable = false;
             boolean isReadOnly = false;
-            String  displayType = "TEXT"; //
+            String displayType = "TEXT"; //
             boolean isBulkUpdatable = false;
             boolean isMLS = false;
-            String  backendName = "usr_udf_util_attr"; //
+            String backendName = "usr_udf_util_attr"; //
+            String lookupCode = "Lookup.LDAP.Students.OU.ProvAttrMap"; //
             boolean isSearchable = isUserSearchable; //
             String  category = "Basic User Information";
             
+            newUDF.setPossibleValues(lookupCode, entries);
             newUDF.setName(api_name);
             newUDF.setVisible(isVisible);
             newUDF.setBackendRequired(isBackendRequired);
@@ -138,6 +135,7 @@ public class OIMUserDefinedFieldUtility
             newUDF.setBulkUpdatable(isBulkUpdatable);
             newUDF.setMLS(isMLS);
             newUDF.setBackendName(backendName);
+            newUDF.setLookupCode(lookupCode);
             newUDF.setSearchable(isSearchable);
             newUDF.setCategory(category);
 
