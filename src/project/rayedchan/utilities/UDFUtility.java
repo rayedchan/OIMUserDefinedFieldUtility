@@ -5,6 +5,7 @@ import Thor.API.Exceptions.tcColumnNotFoundException;
 import Thor.API.Exceptions.tcInvalidLookupException;
 import Thor.API.Operations.tcLookupOperationsIntf;
 import Thor.API.tcResultSet;
+import java.io.File;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
@@ -274,6 +275,21 @@ public class UDFUtility
         doc.appendChild(rootTag);
         
         return doc;
+    }
+    
+    /*
+     * Creates the XML metadata file from a document object
+     * @param   doc                 Document object
+     * @param   destinationPath     The absolute path of file to be created 
+     */
+    public static void createXMLFile(Document doc, String destinationPath) throws TransformerConfigurationException, TransformerException
+    {       
+        // Write the content into xml file
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new File(destinationPath));
+        transformer.transform(source, result);
     }
     
 }

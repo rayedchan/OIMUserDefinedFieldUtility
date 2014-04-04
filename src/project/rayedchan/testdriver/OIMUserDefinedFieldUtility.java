@@ -5,13 +5,18 @@ import Thor.API.Exceptions.tcColumnNotFoundException;
 import Thor.API.Exceptions.tcInvalidLookupException;
 import Thor.API.Operations.tcLookupOperationsIntf;
 import Thor.API.tcResultSet;
+import java.io.File;
 import java.util.*;
 import javax.security.auth.login.LoginException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.xpath.XPathExpressionException;
 import oracle.iam.configservice.api.Constants;
 import oracle.iam.configservice.vo.AttributeDefinition;
@@ -41,6 +46,7 @@ public class OIMUserDefinedFieldUtility
     public static final String OIM_PASSWORD = "Password1";
     public static final String OIM_CLIENT_HOME = "/home/oracle/Desktop/oimclient";
     public static final String AUTHWL_PATH = OIM_CLIENT_HOME + "/conf/authwl.conf";
+    public static final String DESTINATION_PATH_OF_UDF_METADATA = "/home/oracle/Desktop/udf_util.xml";
     
     public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcAPIException, tcInvalidLookupException, tcColumnNotFoundException 
     {
@@ -127,10 +133,12 @@ public class OIMUserDefinedFieldUtility
 
             // Add new UDF to document
             UDFUtility.createUserDefinedField(doc, newUDF);
+                     
+            // Create XML file
+            UDFUtility.createXMLFile(doc, DESTINATION_PATH_OF_UDF_METADATA);
             
             // Print Document object to String
-            System.out.println(UDFUtility.parseDocumentIntoStringXML(doc));
-            
+            //System.out.println(UDFUtility.parseDocumentIntoStringXML(doc));
         } 
             
         finally
