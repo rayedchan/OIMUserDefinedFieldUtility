@@ -72,11 +72,15 @@ public class OIMUserDefinedFieldUtility
             //UserManager usermgr = oimClient.getService(UserManager.class);
             lookupOps = oimClient.getService(tcLookupOperationsIntf.class);
             String lookupName = "Lookup.LDAP.Students.OU.ProvAttrMap";
-            Map entries = UDFUtility.getLookupEntries(lookupOps, lookupName);
+            Map entries = UDFUtility.getLookupEntries(lookupOps, lookupName); // TODO: must have at least one element; else throw exception
             
             // Call a method from a service
             //List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
             //System.out.println(users);
+            
+            // Validation methods
+            System.out.println(UDFUtility.isUDFDisplayTypeValidate("LOV"));
+            //Prevent duplicates of backend columns and UDFs in CSV file
             
             // Create template document for a UDF
             Document doc = UDFUtility.createUDFDocument();
@@ -133,12 +137,14 @@ public class OIMUserDefinedFieldUtility
 
             // Add new UDF to document
             UDFUtility.createUserDefinedField(doc, newUDF);
+            UDFUtility.createUserDefinedField(doc, newUDF);
                      
             // Create XML file
-            UDFUtility.createXMLFile(doc, DESTINATION_PATH_OF_UDF_METADATA);
+            //UDFUtility.createXMLFile(doc, DESTINATION_PATH_OF_UDF_METADATA);
             
             // Print Document object to String
             //System.out.println(UDFUtility.parseDocumentIntoStringXML(doc));
+            
         } 
             
         finally

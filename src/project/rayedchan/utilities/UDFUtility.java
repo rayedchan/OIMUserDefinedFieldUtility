@@ -292,4 +292,23 @@ public class UDFUtility
         transformer.transform(source, result);
     }
     
+    /*
+     * Validates the display type of a user defined field
+     * Possible display types:
+     *  - CHECKBOX
+     *  - LOV
+     *  - TEXT
+     *  - DATE_ONLY
+     *  - NUMBER
+     */
+    public static boolean isUDFDisplayTypeValidate(String displayType)
+    {
+        return displayType.equals(Constants.DisplayType.TEXT.name()) ||
+               displayType.equals(Constants.DisplayType.CHECKBOX.name()) ||
+               displayType.equals(Constants.DisplayType.LOV.name()) ||
+               displayType.equals(Constants.DisplayType.DATE_ONLY.name()) ||
+               displayType.equals(Constants.DisplayType.NUMBER.name());
+                
+    }
+    
 }
