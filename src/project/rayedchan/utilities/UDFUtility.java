@@ -8,6 +8,9 @@ import Thor.API.tcResultSet;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -244,4 +247,33 @@ public class UDFUtility
        
         return entries;
     }
+    
+    /*
+     * Creates a User Defined Field (UDF) template document to 
+     * represent the base structure of a UDF metadata
+     * @return document object
+     */
+    public static Document createUDFDocument() throws ParserConfigurationException
+    {          
+        // Create Document object
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = dbf.newDocumentBuilder();
+        Document doc = builder.newDocument();
+        
+        // Root Element to hold all AttributeDefinition Elements
+        Element rootTag = doc.createElement("xl-ddm-data");
+            
+        // Set properties of root element
+        rootTag.setAttribute("version", "2.0.2.1");
+        rootTag.setAttribute("user", "XELSYSADM");
+        rootTag.setAttribute("database", "jdbc:oracle:thin:@localhost:1521/orcl");
+        rootTag.setAttribute("exported-date", "1396307720581");
+        rootTag.setAttribute("description", "");
+
+        // Add root element to document object
+        doc.appendChild(rootTag);
+        
+        return doc;
+    }
+    
 }

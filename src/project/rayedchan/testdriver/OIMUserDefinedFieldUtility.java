@@ -72,22 +72,8 @@ public class OIMUserDefinedFieldUtility
             //List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
             //System.out.println(users);
             
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = dbf.newDocumentBuilder();
-            Document doc = builder.newDocument();
-            
-            // Root Element to hold all AttributeDefinition Elements
-            Element rootTag = doc.createElement("xl-ddm-data");
-            
-            // Set properties of root element
-            rootTag.setAttribute("version", "2.0.2.1");
-            rootTag.setAttribute("user", "XELSYSADM");
-            rootTag.setAttribute("database", "jdbc:oracle:thin:@localhost:1521/orcl");
-            rootTag.setAttribute("exported-date", "1396307720581");
-            rootTag.setAttribute("description", "");
-            
-            // Add root element to document object
-            doc.appendChild(rootTag);
+            // Create template document for a UDF
+            Document doc = UDFUtility.createUDFDocument();
             
             // Built new Attribute Definition object which represents a UDF
             AttributeDefinition newUDF = new AttributeDefinition();
