@@ -5,10 +5,16 @@ import Thor.API.Exceptions.tcColumnNotFoundException;
 import Thor.API.Exceptions.tcInvalidLookupException;
 import Thor.API.Operations.tcLookupOperationsIntf;
 import Thor.API.tcResultSet;
+import com.thortech.xl.dataaccess.tcDataSet;
+import com.thortech.xl.dataaccess.tcDataSetException;
+import com.thortech.xl.dataobj.PreparedStatementUtil;
+import com.thortech.xl.orb.dataaccess.tcDataAccessException;
 import java.io.File;
 import java.io.StringWriter;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -28,6 +34,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import oracle.iam.configservice.api.Constants;
+import project.rayedchan.services.tcOIMDatabaseConnection;
 
 /**
  * @author rayedchan
@@ -309,6 +316,33 @@ public class UDFUtility
                displayType.equals(Constants.DisplayType.DATE_ONLY.name()) ||
                displayType.equals(Constants.DisplayType.NUMBER.name());
                 
+    }
+    
+    /*
+     * Get all the column names in the USR table.
+     * @param dbConnection  Connection to OIM Schema via OIMClient
+     * @return names of all the columns in the USR table
+     */
+    public static Set<String> getAllUSRColumns(tcOIMDatabaseConnection dbConnection) throws tcDataSetException, tcDataAccessException
+    { 
+        Set<String> columnNames = new HashSet<String>();
+        String query = "SELECT column_name FROM USER_TAB_COLUMNS WHERE table_name = ?";          
+        PreparedStatementUtil ps = new PreparedStatementUtil();
+        ps.setStatement(dbConnection.getDbProvider(), query);
+        ps.setString(1, "USR");
+        ps.execute();
+        tcDataSet usrColumnDataSet = ps.getDataSet();
+        int recordCount = usrColumnDataSet.getTotalRowCount();
+        
+        // Iterate all the columns
+        for(int i = 0; i < recordCount; i++)
+        {
+            usrColumnDataSet.goToRow(i); // Move pointer to next record
+            String columnName = usrColumnDataSet.getString("column_name");
+            columnNames.add(columnName); // Add column name to set
+        }
+        
+        return columnNames;
     }
     
 }

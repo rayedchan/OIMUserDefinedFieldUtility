@@ -5,6 +5,8 @@ import Thor.API.Exceptions.tcColumnNotFoundException;
 import Thor.API.Exceptions.tcInvalidLookupException;
 import Thor.API.Operations.tcLookupOperationsIntf;
 import Thor.API.tcResultSet;
+import com.thortech.xl.dataaccess.tcDataSetException;
+import com.thortech.xl.orb.dataaccess.tcDataAccessException;
 import java.io.File;
 import java.util.*;
 import javax.security.auth.login.LoginException;
@@ -28,6 +30,7 @@ import oracle.iam.platform.authz.exception.AccessDeniedException;
 import oracle.iam.platform.entitymgr.vo.SearchCriteria;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import project.rayedchan.services.tcOIMDatabaseConnection;
 import project.rayedchan.utilities.UDFUtility;
 
 /**
@@ -48,7 +51,7 @@ public class OIMUserDefinedFieldUtility
     public static final String AUTHWL_PATH = OIM_CLIENT_HOME + "/conf/authwl.conf";
     public static final String DESTINATION_PATH_OF_UDF_METADATA = "/home/oracle/Desktop/udf_util.xml";
     
-    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcAPIException, tcInvalidLookupException, tcColumnNotFoundException 
+    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcAPIException, tcInvalidLookupException, tcColumnNotFoundException, tcDataSetException, tcDataAccessException 
     {
         OIMClient oimClient = null;
         tcLookupOperationsIntf lookupOps = null;
@@ -67,16 +70,22 @@ public class OIMUserDefinedFieldUtility
  
             // Log in to OIM with the approriate credentials
             oimClient.login(OIM_USERNAME, OIM_PASSWORD.toCharArray());
- 
+            
             // OIM API services
-            //UserManager usermgr = oimClient.getService(UserManager.class);
+            // UserManager usermgr = oimClient.getService(UserManager.class);
             lookupOps = oimClient.getService(tcLookupOperationsIntf.class);
             String lookupName = "Lookup.LDAP.Students.OU.ProvAttrMap";
             Map entries = UDFUtility.getLookupEntries(lookupOps, lookupName); // TODO: must have at least one element; else throw exception
-            
+              
             // Call a method from a service
             //List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
             //System.out.println(users);
+                       
+            // Connect OIM Schema through OIM Client
+            tcOIMDatabaseConnection dbConnection = new tcOIMDatabaseConnection(oimClient);
+            Set<String> columnNames =  UDFUtility.getAllUSRColumns(dbConnection);
+            System.out.println(columnNames);
+            System.out.println(columnNames.size());
             
             // Validation methods
             System.out.println(UDFUtility.isUDFDisplayTypeValidate("LOV"));
