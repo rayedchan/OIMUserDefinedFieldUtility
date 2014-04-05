@@ -381,5 +381,80 @@ public class UDFUtility
                 parser.close(); 
         }
     }
+      
+    /*
+     * Determine if a string can be parse into an integer.
+     * @param   strValue    validate if string value can be parsed 
+     * @return  boolean value to indicate if string is an integer
+     */
+    public static boolean isInteger(String strValue)
+    {
+        try 
+        {
+            Integer.parseInt(strValue);
+            return true;
+        }
+        
+        catch (NumberFormatException nfe)
+        {
+            return false;
+        }
+    }
     
+    /*
+     * Determine if searchable attribute on a UDF is a valid value.
+     * @param   strValue    validate if string value valid
+     * @return  boolean value to indicate if string valid
+     */
+    public static boolean isSearchableValidValue(String strValue)
+    {
+        if("Y".equals(strValue) || "N".equals(strValue))
+        {
+            return true;
+        }
+        
+        return false;      
+    }
+    
+    /*
+     * Derive the backend type of a UDF from the display type
+     * @param displayType   UDF type on the front-end
+     * @return corresponding backend type
+     */
+    public static String deriveBackendTypeFromDisplayType(String displayType)
+    {
+        String backendType = "";
+        
+        // Checkbox display type
+        if(displayType.equals(Constants.DisplayType.CHECKBOX.name()))
+        {
+            backendType = "string";
+        }
+        
+        // LOV display type
+        else if(displayType.equals(Constants.DisplayType.LOV.name()))
+        {
+            backendType = "string";
+        }
+        
+        // TEXT display type
+        else if(displayType.equals(Constants.DisplayType.TEXT.name()))
+        {
+            backendType = "string";
+        }
+        
+        // DATE_ONLY display type
+        else if(displayType.equals(Constants.DisplayType.DATE_ONLY.name()))
+        {
+            backendType = "date";
+        }
+               
+        // NUMBER display type
+        else if(displayType.equals(Constants.DisplayType.NUMBER.name()))
+        {
+            backendType = "number";
+        }
+
+        return backendType;
+    }
 }
