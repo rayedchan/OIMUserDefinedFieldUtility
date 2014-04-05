@@ -10,11 +10,10 @@ import com.thortech.xl.dataaccess.tcDataSetException;
 import com.thortech.xl.dataobj.PreparedStatementUtil;
 import com.thortech.xl.orb.dataaccess.tcDataAccessException;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -34,6 +33,9 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import oracle.iam.configservice.api.Constants;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 import project.rayedchan.services.tcOIMDatabaseConnection;
 
 /**
@@ -343,6 +345,41 @@ public class UDFUtility
         }
         
         return columnNames;
+    }
+    
+    /*
+     * Print content of csv file to standard out.
+     * @param   fileName    Absolute path of CSV file
+     * @param   headers     The header names defined in the CSV file
+     * @param   delimiter   A separator used to separate values in CSV file
+     */
+    public static void printCSVFile(String fileName, String[] headers, char delimiter) throws IOException
+    {
+        CSVParser parser = null;
+        
+        try
+        {
+            CSVFormat format = CSVFormat.DEFAULT.withHeader().withDelimiter(delimiter);  
+            parser = new CSVParser(new FileReader(fileName), format);
+
+            for(CSVRecord record : parser)
+            {
+                ArrayList<String> entry = new ArrayList();
+                
+                for(String headerName: headers)
+                {
+                    entry.add(record.get(headerName));
+                }
+                
+                System.out.println(entry);
+            }
+        }
+
+        finally
+        {
+            if(parser != null)
+                parser.close(); 
+        }
     }
     
 }

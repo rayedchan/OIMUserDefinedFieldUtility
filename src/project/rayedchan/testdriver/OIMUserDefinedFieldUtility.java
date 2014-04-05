@@ -8,6 +8,8 @@ import Thor.API.tcResultSet;
 import com.thortech.xl.dataaccess.tcDataSetException;
 import com.thortech.xl.orb.dataaccess.tcDataAccessException;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 import javax.security.auth.login.LoginException;
 import javax.xml.parsers.DocumentBuilder;
@@ -28,6 +30,9 @@ import oracle.iam.identity.usermgmt.vo.User;
 import oracle.iam.platform.OIMClient;
 import oracle.iam.platform.authz.exception.AccessDeniedException;
 import oracle.iam.platform.entitymgr.vo.SearchCriteria;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import project.rayedchan.services.tcOIMDatabaseConnection;
@@ -51,7 +56,7 @@ public class OIMUserDefinedFieldUtility
     public static final String AUTHWL_PATH = OIM_CLIENT_HOME + "/conf/authwl.conf";
     public static final String DESTINATION_PATH_OF_UDF_METADATA = "/home/oracle/Desktop/udf_util.xml";
     
-    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcAPIException, tcInvalidLookupException, tcColumnNotFoundException, tcDataSetException, tcDataAccessException 
+    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcAPIException, tcInvalidLookupException, tcColumnNotFoundException, tcDataSetException, tcDataAccessException, IOException 
     {
         OIMClient oimClient = null;
         tcLookupOperationsIntf lookupOps = null;
@@ -72,27 +77,46 @@ public class OIMUserDefinedFieldUtility
             oimClient.login(OIM_USERNAME, OIM_PASSWORD.toCharArray());
             
             // OIM API services
-            // UserManager usermgr = oimClient.getService(UserManager.class);
             lookupOps = oimClient.getService(tcLookupOperationsIntf.class);
-            String lookupName = "Lookup.LDAP.Students.OU.ProvAttrMap";
-            Map entries = UDFUtility.getLookupEntries(lookupOps, lookupName); // TODO: must have at least one element; else throw exception
-              
-            // Call a method from a service
-            //List<User> users = usermgr.search(new SearchCriteria("User Login", "*", SearchCriteria.Operator.EQUAL), new HashSet(), new HashMap());
-            //System.out.println(users);
-                       
+                 
             // Connect OIM Schema through OIM Client
             tcOIMDatabaseConnection dbConnection = new tcOIMDatabaseConnection(oimClient);
-            Set<String> columnNames =  UDFUtility.getAllUSRColumns(dbConnection);
-            System.out.println(columnNames);
-            System.out.println(columnNames.size());
+           
+            // Create base template document for a UDF
+            Document doc = UDFUtility.createUDFDocument();
             
             // Validation methods
-            System.out.println(UDFUtility.isUDFDisplayTypeValidate("LOV"));
+            //System.out.println(UDFUtility.isUDFDisplayTypeValidate("LOV"));
             //Prevent duplicates of backend columns and UDFs in CSV file
+            String lookupName = "Lookup.LDAP.Students.OU.ProvAttrMap";
+            Map entries = UDFUtility.getLookupEntries(lookupOps, lookupName); // TODO: must have at least one element; else throw exception
+            Set<String> columnNames =  UDFUtility.getAllUSRColumns(dbConnection);  
             
-            // Create template document for a UDF
-            Document doc = UDFUtility.createUDFDocument();
+            
+            String[] headerCSV = {"UDF", "Field Type", "Max Length", "Searchable", "Lookup Table"}; 
+               
+            UDFUtility.printCSVFile("/home/oracle/Desktop/allUDF.csv", headerCSV, ',');
+            
+            /*CSVFormat format = CSVFormat.DEFAULT.withHeader().withDelimiter(',');
+            CSVParser parser = new CSVParser(new FileReader("/home/oracle/Desktop/allUDF.csv"), format);
+        
+            for(CSVRecord record : parser)
+            {
+                System.out.printf("%s, %s, %s, %s , %s", 
+                        record.get("UDF"),
+                        record.get("Field Type"),
+                        record.get("Max Length"),
+                        record.get("Searchable"),
+                        record.get("Lookup Table")
+                        );
+                System.out.println();
+            }
+        
+            parser.close();
+            */
+            
+            
+            
             
             // Built new Attribute Definition object which represents a UDF
             AttributeDefinition newUDF = new AttributeDefinition();
