@@ -14,6 +14,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -40,10 +42,20 @@ import project.rayedchan.services.tcOIMDatabaseConnection;
 
 /**
  * @author rayedchan
+ * This class deals with the backend creation of User Defined Fields.
+ * A CSV file is processed and a UDF XML file is generated in order to be used for OIM Deployment Manager.
+ * This utility does not support creation of encrypted UDFs.
+ * Use standard convention by having USR_UDF_ as the prefix for each backend attribute name.
+ * 
+ * Side Notes: 
+ * OIM does not allow you to export encrypted UDFs.
+ * Length of OIM column name must be less than or equal to 30.
+ * You can only have 22 characters or less for API Name when adding 
+ * through OIM console. OIM will prefix with USR_UDF_ on the backend column name.
  */
 public class UDFUtility 
 {
-    /*
+    /**
      * This creates a single user defined field (UDF) in XML format.
      * @param   document    Object representation of XML document file
      * @param   attrObj     Representation of a single User Defined Field
@@ -200,7 +212,179 @@ public class UDFUtility
         rootNode.appendChild(attrDef); 
     }
     
-    /*
+    /**
+     * Builds the UDF XML file.
+     * @param   dbConnection    Database connection to the OIM Schema
+     * @param   lookupOps       OIM Lookup operation services
+     * @param   parser          Parser object contains the CSV file to be processed
+     * @return  Document of the final UDF XML MetaData to be used for deployment manager  
+     */
+    public static Document buildUDFDocument(tcOIMDatabaseConnection dbConnection, tcLookupOperationsIntf lookupOps,  CSVParser parser) throws tcDataSetException, tcDataAccessException, ParserConfigurationException, XPathExpressionException
+    {              
+        // Get all the columns in the USR table     
+        Set<String> columnNames =  UDFUtility.getAllUSRColumns(dbConnection);
+
+        // Used to determine if there are duplicates UDF in csv file
+        Set<String> udfDuplicateValidator = new HashSet<String>();
+
+        // Create base template document for a UDF
+        Document doc = UDFUtility.createUDFDocument();
+        
+        // Iterate each entry in the csv file
+        for(CSVRecord record : parser)
+        {
+            // Get values of a record from csv file; Change header value if different
+            String attrNameCSV = record.get("ColumnName");
+            String displayTypeCSV = record.get("Field Type").toUpperCase();
+            String lengthCSV = record.get("Max Length");
+            String searchableCSV = record.get("Searchable").toUpperCase();
+            String lookupNameCSV = record.get("Lookup Table");
+            Map entries = null;
+            int attrNameLength = attrNameCSV.length();
+
+            // Check if the attribute name (also the column name contains any spaces
+            if(UDFUtility.containsWhitespace(attrNameCSV))
+            {
+                System.out.println("WARNING: Backend contains a whitespace: " + record);
+                continue; // Skip to next iteration
+            }
+
+            // Check if the attribute name, which is also the column name for this utility, is valid
+            if(attrNameLength > 30 || attrNameLength < 1)
+            {                
+                System.out.println("WARNING: Backend column must have length 1 to 30: " + record);
+                continue; // Skip to next iteration
+            }
+
+            // Check if the column name in CSV file exists in the USR table
+            if(columnNames.contains(attrNameCSV.toUpperCase()))
+            {
+                System.out.println("WARNING: UDF already exists in Identity: " + record);
+                continue; // Skip to next iteration
+            }
+
+            // Check if current attribute name has already processed
+            if(udfDuplicateValidator.contains(attrNameCSV))
+            {
+                System.out.println("WARNING: The attribute name has already been staged: " + record);
+                continue; // Skip to next iteration
+            }
+
+            // Check if the display type is valid
+            if(!UDFUtility.isUDFDisplayTypeValidate(displayTypeCSV))
+            {                 
+                System.out.println("WARNING: Invalid display type: " + record);
+                continue; // Skip to next iteration
+            }
+
+            // Check if length is an integer
+            if(!UDFUtility.isInteger(lengthCSV))
+            {
+                System.out.println("WARNING: Length is not a valid number: " + record);
+                continue; // Skip to next iteration                   
+            }
+
+            // Check if length is between 1 to 4000
+            int lengthSize = Integer.parseInt(lengthCSV);
+            if(lengthSize > 4000 || lengthSize < 1)
+            {
+                System.out.println("WARNING: Length must be between 1 and 4000: " + record);
+                continue; // Skip to next iteration 
+            }
+
+            // Check if searchable has a valid value
+            if(!UDFUtility.isSearchableValidValue(searchableCSV))
+            {                 
+                System.out.println("WARNING: Searchable is not a valid: " + record);
+                continue; // Skip to next iteration
+            }
+
+            // For LOV display type, get lookup entries
+            if(Constants.DisplayType.LOV.name().equals(displayTypeCSV))
+            {
+                try
+                {
+                    // Calling method checks if the lookup definition exists
+                    entries = UDFUtility.getLookupEntries(lookupOps, lookupNameCSV); 
+
+                    // LOV UDFs must have at least one element to be processed
+                    if(entries.isEmpty())
+                    {
+                        System.out.println("WARNING: There must be at least one entry in lookup: " + record);
+                        continue;
+                    }
+                }
+
+                // Fix exception to print full stack trace when logging is setup
+                catch(tcAPIException e){System.out.println("ERROR: Exception " + e + " for :"+ record); continue;}
+                catch(tcInvalidLookupException e){System.out.println("ERROR: Exception " + e + " for :"+ record); continue;}
+                catch(tcColumnNotFoundException e){System.out.println("ERROR: Exception " + e + " for :"+ record); continue;}
+            }
+
+            // Derive backend type based on display type
+            String derivedType = UDFUtility.deriveBackendTypeFromDisplayType(displayTypeCSV);
+
+            // Built new Attribute Definition object which represents a UDF
+            AttributeDefinition newUDF = new AttributeDefinition();
+
+            String api_name = attrNameCSV; // Value from file
+            boolean isVisible = true;
+            boolean isBackendRequired = false;
+            String type = derivedType; // Transformation of value from file
+            boolean isSystemControlled = false;
+            boolean isCustomAttribute = true;
+            String encryption = "CLEAR";
+            String description = "";
+            String backendType = type; //
+            boolean isMultiRepresented = false;
+            boolean isRequired = false;
+            Integer maxSize = Integer.parseInt(lengthCSV); // Value from file
+            boolean isMultiValued = false;
+            boolean isUserSearchable = (searchableCSV.equals("Y")) ? true : false; // Transformation of value from file
+            boolean isReadOnly = false;
+            String displayType = displayTypeCSV; // Value from file
+            boolean isBulkUpdatable = false;
+            boolean isMLS = false;
+            String backendName = api_name.toLowerCase(); //
+            String lookupCode = lookupNameCSV; //
+            boolean isSearchable = isUserSearchable; //
+            String  category = "Basic User Information";
+
+            newUDF.setPossibleValues(lookupCode, entries);
+            newUDF.setName(api_name);
+            newUDF.setVisible(isVisible);
+            newUDF.setBackendRequired(isBackendRequired);
+            newUDF.setType(type);
+            newUDF.setSystemControlled(isSystemControlled);
+            newUDF.setCustomAttribute(isCustomAttribute);
+            newUDF.setEncryption(encryption);
+            newUDF.setDescription(description);
+            newUDF.setBackendType(backendType);
+            newUDF.setMultiRepresented(isMultiRepresented);
+            newUDF.setRequired(isRequired);
+            newUDF.setMaxSize(maxSize);
+            newUDF.setMultiValued(isMultiValued);
+            newUDF.setUserSearchable(isUserSearchable);
+            newUDF.setReadOnly(isReadOnly);
+            newUDF.setDisplayType(displayType);
+            newUDF.setBulkUpdatable(isBulkUpdatable);
+            newUDF.setMLS(isMLS);
+            newUDF.setBackendName(backendName);
+            newUDF.setLookupCode(lookupCode);
+            newUDF.setSearchable(isSearchable);
+            newUDF.setCategory(category);
+
+            // Add new UDF to document
+            UDFUtility.createUserDefinedField(doc, newUDF); 
+
+            // UDF in staging process
+            udfDuplicateValidator.add(attrNameCSV);
+        }
+        
+        return doc;
+    }
+    
+    /**
      * Converts a Document into String representation
      * UTF-8 conversion
      * @param   document    Document object to be parsed
@@ -215,7 +399,7 @@ public class UDFUtility
         return newObjectResourceXML;
     }
         
-    /*
+    /**
      * Prints the records of a tcResultSet.
      * @param   tcResultSetObj  tcResultSetObject
      */
@@ -235,7 +419,7 @@ public class UDFUtility
         }
     }
     
-    /*
+    /**
      * Gets the entries from a lookup definition
      * @param   lookupOps         Service class for lookup operations
      * @param   lookupDefName   Name of lookup definition
@@ -258,7 +442,7 @@ public class UDFUtility
         return entries;
     }
     
-    /*
+    /**
      * Creates a User Defined Field (UDF) template document to 
      * represent the base structure of a UDF metadata
      * @return document object
@@ -286,7 +470,7 @@ public class UDFUtility
         return doc;
     }
     
-    /*
+    /**
      * Creates the XML metadata file from a document object
      * @param   doc                 Document object
      * @param   destinationPath     The absolute path of file to be created 
@@ -301,7 +485,7 @@ public class UDFUtility
         transformer.transform(source, result);
     }
     
-    /*
+    /**
      * Validates the display type of a user defined field
      * Possible display types:
      *  - CHECKBOX
@@ -309,6 +493,8 @@ public class UDFUtility
      *  - TEXT
      *  - DATE_ONLY
      *  - NUMBER
+     * @param   displayType Attribute display type on the GUI
+     * @return  true if the display type is valid; false otherwise
      */
     public static boolean isUDFDisplayTypeValidate(String displayType)
     {
@@ -320,7 +506,7 @@ public class UDFUtility
                 
     }
     
-    /*
+    /**
      * Get all the column names in the USR table.
      * @param dbConnection  Connection to OIM Schema via OIMClient
      * @return names of all the columns in the USR table
@@ -347,7 +533,7 @@ public class UDFUtility
         return columnNames;
     }
     
-    /*
+    /**
      * Print content of csv file to standard out.
      * @param   fileName    Absolute path of CSV file
      * @param   headers     The header names defined in the CSV file
@@ -382,7 +568,7 @@ public class UDFUtility
         }
     }
       
-    /*
+    /**
      * Determine if a string can be parse into an integer.
      * @param   strValue    validate if string value can be parsed 
      * @return  boolean value to indicate if string is an integer
@@ -401,7 +587,7 @@ public class UDFUtility
         }
     }
     
-    /*
+    /**
      * Determine if searchable attribute on a UDF is a valid value.
      * @param   strValue    validate if string value valid
      * @return  boolean value to indicate if string valid
@@ -416,7 +602,7 @@ public class UDFUtility
         return false;      
     }
     
-    /*
+    /**
      * Derive the backend type of a UDF from the display type
      * @param displayType   UDF type on the front-end
      * @return corresponding backend type
@@ -456,5 +642,17 @@ public class UDFUtility
         }
 
         return backendType;
+    }
+    
+    /**
+     * Determines if a String contains a whitespace
+     * @param   value   Determine if strong contains a whitespace
+     * @return  true if string contains whitespace; false otherwise
+     */
+    public static boolean containsWhitespace(String value)
+    {
+        Pattern pattern = Pattern.compile("\\s");
+        Matcher matcher = pattern.matcher(value);
+        return matcher.find();
     }
 }

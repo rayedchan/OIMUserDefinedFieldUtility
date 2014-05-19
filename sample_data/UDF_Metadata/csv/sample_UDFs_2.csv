@@ -1,0 +1,6 @@
+ColumnName,Field Type,Max Length,Searchable,Lookup Table
+usr_udf_uid,TEXT,50,N,
+usr_udf_fsmountpt,TEXT,50,N,
+usr_udf_fsdir,TEXT,50,N,
+usr_udf_fstype,TEXT,50,N,
+usr_udf_fsmode,TEXT,50,N,
