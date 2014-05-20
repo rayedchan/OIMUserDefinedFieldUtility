@@ -1,0 +1,1199 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff version="1.1" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+<file source-language="en" original="/xliffBundles/oracle/iam/ui/runtime/BizEditorBundle.xlf" datatype="x-oracle-adf">
+<body>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBTABLE_ID_NUM__c_description']}">
+<source>ID Num</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedEO.UD_DBTABLE_ID_NUM__c_LABEL">
+<source>ID Num</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBTABLE_GLOBAL_NCSU_ID__c_description']}">
+<source>Global Identifier</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedEO.UD_DBTABLE_GLOBAL_NCSU_ID__c_LABEL">
+<source>Global Identifier</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBTABLE_SERVER__c_description']}">
+<source>Server</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedEO.UD_DBTABLE_SERVER__c_LABEL">
+<source>Server</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedEO.serviceaccount__c_LABEL">
+<source>Service Account</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_GRPEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_GRP_GROUP_NAME__c_description']}">
+<source>Group Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_GRPEO.UD_DBT_GRP_GROUP_NAME__c_LABEL">
+<source>Group Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSTYEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_FSTY_UNIX_FSTYPE__c_description']}">
+<source>Unix Fstype</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSTYEO.UD_DBT_FSTY_UNIX_FSTYPE__c_LABEL">
+<source>Unix Fstype</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_MLTYEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_MLTY_MAIL_TYPE__c_description']}">
+<source>Mail Type</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_MLTYEO.UD_DBT_MLTY_MAIL_TYPE__c_LABEL">
+<source>Mail Type</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_MLHTEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_MLHT_MAIL_HOST__c_description']}">
+<source>Mail Host</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_MLHTEO.UD_DBT_MLHT_MAIL_HOST__c_LABEL">
+<source>Mail Host</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_UIDEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_UID_UNIX_UID__c_description']}">
+<source>Unix UID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_UIDEO.UD_DBT_UID_UNIX_UID__c_LABEL">
+<source>Unix UID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_PRIVEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_PRIV_PRIVACY__c_description']}">
+<source>Privacy</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_PRIVEO.UD_DBT_PRIV_PRIVACY__c_LABEL">
+<source>Privacy</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_REMLEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_REML_RECOVERY_EMAIL__c_description']}">
+<source>Recovery Email</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_REMLEO.UD_DBT_REML_RECOVERY_EMAIL__c_LABEL">
+<source>Recovery Email</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_CREDEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_CRED_CREDENTIAL_LEVEL__c_description']}">
+<source>Credential Level</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_CREDEO.UD_DBT_CRED_CREDENTIAL_LEVEL__c_LABEL">
+<source>Credential Level</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_GIDEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_GID_UNIX_GID__c_description']}">
+<source>Unix GID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_GIDEO.UD_DBT_GID_UNIX_GID__c_LABEL">
+<source>Unix GID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_AFFEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_AFF_AFFILIATION__c_description']}">
+<source>Affiliation</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_AFFEO.UD_DBT_AFF_AFFILIATION__c_LABEL">
+<source>Affiliation</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_SHELEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_SHEL_UNIX_SHELL__c_description']}">
+<source>Unix Shell</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_SHELEO.UD_DBT_SHEL_UNIX_SHELL__c_LABEL">
+<source>Unix Shell</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSMEEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_FSME_UNIX_FSMODE__c_description']}">
+<source>Unix Fsmode</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSMEEO.UD_DBT_FSME_UNIX_FSMODE__c_LABEL">
+<source>Unix Fsmode</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSMTEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_FSMT_UNIX_FSMOUNTPT__c_description']}">
+<source>Unix Fsmountpt</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSMTEO.UD_DBT_FSMT_UNIX_FSMOUNTPT__c_LABEL">
+<source>Unix Fsmountpt</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSDREO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_FSDR_UNIX_FSDIR__c_description']}">
+<source>Unix Fsdir</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_FSDREO.UD_DBT_FSDR_UNIX_FSDIR__c_LABEL">
+<source>Unix Fsdir</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_RESEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_RES_RESOURCE_DOMAIN__c_description']}">
+<source>Resource Domain</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_RESEO.UD_DBT_RES_RESOURCE_DOMAIN__c_LABEL">
+<source>Resource Domain</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_RES_USER_ACCOUNT__c_description']}">
+<source>User Account</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_RESEO.UD_DBT_RES_USER_ACCOUNT__c_LABEL">
+<source>User Account</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_RES_RESOURCE_ID__c_description']}">
+<source>Resource ID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_RESEO.UD_DBT_RES_RESOURCE_ID__c_LABEL">
+<source>Resource ID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_ALTEEO.action_LABEL">
+<source>Action</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_DBT_ALTE_ALTERNATE_EMAIL__c_description']}">
+<source>Alternate Email</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.Multivalued.entity.MultivaluedUD_DBT_ALTEEO.UD_DBT_ALTE_ALTERNATE_EMAIL__c_LABEL">
+<source>Alternate Email</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.Global_NCSU_ID__c_LABEL">
+<source>Global NCSU ID</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.Global_NCSU_ID__c_LABEL">
+<source>Global NCSU ID</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_ACME_ACCOUNTID__c_description']}">
+<source>accountID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.UD_ACME_ACCOUNTID__c_LABEL">
+<source>accountID</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_ACME_LOGIN__c_description']}">
+<source>login</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.UD_ACME_LOGIN__c_LABEL">
+<source>login</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_ACME_FIRSTNAME__c_description']}">
+<source>firstName</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.UD_ACME_FIRSTNAME__c_LABEL">
+<source>firstName</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_ACME_LASTNAME__c_description']}">
+<source>lastName</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.UD_ACME_LASTNAME__c_LABEL">
+<source>lastName</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_ACME_EMAIL__c_description']}">
+<source>email</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.UD_ACME_EMAIL__c_LABEL">
+<source>email</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_ACME_LANGUAGES__c_description']}">
+<source>languages</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.UD_ACME_LANGUAGES__c_LABEL">
+<source>languages</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.ACME.entity.ACMEEO.serviceaccount__c_LABEL">
+<source>Service Account</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.text_udf_internal__c_LABEL">
+<source>text_udf_apperance</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.text_udf_internal__c_description">
+<source>text udf internal description</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.text_udf_internal__c_description']}">
+<source>text udf internal description</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.text_udf_internal__c_LABEL">
+<source>text_udf_apperance</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.text_udf_password_internal__c_LABEL">
+<source>text_udf_password</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.text_udf_password_internal__c_LABEL">
+<source>text_udf_password</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.text_udf_password_internal__c_LABEL">
+<source>text_udf_password</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.number_udf_internal__c_LABEL">
+<source>number_udf_appearance</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.number_udf_internal__c_LABEL">
+<source>number_udf_appearance</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.checkbox_udf__c_LABEL">
+<source>checkbox_udf</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.checkbox_udf__c_LABEL">
+<source>checkbox_udf</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.date_udf__c_LABEL">
+<source>date_udf</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.date_udf__c_LABEL">
+<source>date_udf</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup_udf__c_LABEL">
+<source>lookup_udf</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup_udf__c_TOOLTIP">
+<source>lookup udf help text</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup_udf__c_TOOLTIP']}">
+<source>lookup udf help text</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.lookup_udf__c_LABEL">
+<source>lookup_udf</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.NsuniqueID__c_LABEL">
+<source>NsuniqueID</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.NsuniqueID__c_LABEL">
+<source>NsuniqueID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.import_udf_internal__c_LABEL">
+<source>import_udf_internal</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.import_udf_internal__c_LABEL">
+<source>import_udf_internal</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.util_attr__c_LABEL">
+<source>util_attr</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.util_attr__c_LABEL">
+<source>util_attr</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup_no_entries_internal__c_LABEL">
+<source>lookup_no_entries_appearance</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.lookup_no_entries_internal__c_LABEL">
+<source>lookup_no_entries_appearance</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup_no_entry__c_LABEL">
+<source>lookup_no_entry</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.lookup_no_entry__c_LABEL">
+<source>lookup_no_entry</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup3__c_LABEL">
+<source>lookup3</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.lookup3__c_LABEL">
+<source>lookup3</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.lookup2__c_LABEL">
+<source>lookup2</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.lookup2__c_LABEL">
+<source>lookup2</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.THISISAVERYLONGUSERDEFINEDFIEL__c_LABEL">
+<source>THIS IS A VERY LONG USER DEFINED FIELD</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.THISISAVERYLONGUSERDEFINEDFIEL__c_LABEL">
+<source>THIS IS A VERY LONG USER DEFINED FIELD</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.HelloWorld__c_LABEL">
+<source>HelloWorld</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.HelloWorld__c_LABEL">
+<source>HelloWorld</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.USR_UDF_CHECKBOX_UTIL__c_LABEL">
+<source>USR_UDF_CHECKBOX_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.USR_UDF_CHECKBOX_UTIL__c_LABEL">
+<source>USR_UDF_CHECKBOX_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.USR_UDF_DATE_UTIL__c_LABEL">
+<source>USR_UDF_DATE_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.USR_UDF_DATE_UTIL__c_LABEL">
+<source>USR_UDF_DATE_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.USR_UDF_LOOKUP_UTIL__c_LABEL">
+<source>USR_UDF_LOOKUP_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.USR_UDF_LOOKUP_UTIL__c_LABEL">
+<source>USR_UDF_LOOKUP_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.USR_UDF_NUMBER_UTIL__c_LABEL">
+<source>USR_UDF_NUMBER_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.USR_UDF_NUMBER_UTIL__c_LABEL">
+<source>USR_UDF_NUMBER_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.USR_UDF_TEXT2_UTIL__c_LABEL">
+<source>USR_UDF_TEXT2_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.USR_UDF_TEXT2_UTIL__c_LABEL">
+<source>USR_UDF_TEXT2_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.USR_UDF_TEXT_UTIL__c_LABEL">
+<source>USR_UDF_TEXT_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.USR_UDF_TEXT_UTIL__c_LABEL">
+<source>USR_UDF_TEXT_UTIL</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.WORD1WORD2WORD3WORD4__c_LABEL">
+<source>WORD1WORD2WORD3WORD4</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.WORD1WORD2WORD3WORD4__c_LABEL">
+<source>WORD1WORD2WORD3WORD4</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.word1word2word3word4aa__c_LABEL">
+<source>word1word2word3word4aa</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.word1word2word3word4aa__c_LABEL">
+<source>word1word2word3word4aa</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_ACCT_STATUS__c_description']}">
+<source>Acct Status</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_ACCT_STATUS__c_LABEL">
+<source>Acct Status</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CAMPUS_BOX__c_description']}">
+<source>Campus Box</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CAMPUS_BOX__c_LABEL">
+<source>Campus Box</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CAMPUS_ID__c_description']}">
+<source>Campus ID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CAMPUS_ID__c_LABEL">
+<source>Campus ID</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CLASS_CODE__c_description']}">
+<source>Class Code</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CLASS_CODE__c_LABEL">
+<source>Class Code</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CLASS_NAME__c_description']}">
+<source>Class Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CLASS_NAME__c_LABEL">
+<source>Class Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CURR_CODE__c_description']}">
+<source>Curr Code</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CURR_CODE__c_LABEL">
+<source>Curr Code</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CURR_CODE2__c_description']}">
+<source>Curr Code2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CURR_CODE2__c_LABEL">
+<source>Curr Code2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CURR_NAME__c_description']}">
+<source>Curr Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CURR_NAME__c_LABEL">
+<source>Curr Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_CURR_NAME2__c_description']}">
+<source>Curr Name2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_CURR_NAME2__c_LABEL">
+<source>Curr Name2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_DEPT__c_description']}">
+<source>Dept</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_DEPT__c_LABEL">
+<source>Dept</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_DOB__c_description']}">
+<source>DOB</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_DOB__c_LABEL">
+<source>DOB</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_EMAIL_ADDR1__c_description']}">
+<source>Email Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_EMAIL_ADDR1__c_LABEL">
+<source>Email Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_EMAIL_ADDR2__c_description']}">
+<source>Email Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_EMAIL_ADDR2__c_LABEL">
+<source>Email Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_EMP_CLASS__c_description']}">
+<source>Emp Class</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_EMP_CLASS__c_LABEL">
+<source>Emp Class</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_EMP_STATUS__c_description']}">
+<source>Emp Status</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_EMP_STATUS__c_LABEL">
+<source>Emp Status</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_FIRSTNAME__c_description']}">
+<source>Firstname</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_FIRSTNAME__c_LABEL">
+<source>Firstname</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_FSDIR__c_description']}">
+<source>Fsdir</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_FSDIR__c_LABEL">
+<source>Fsdir</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_GID__c_description']}">
+<source>GID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_GID__c_LABEL">
+<source>GID</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HOME_ADDR1__c_description']}">
+<source>Home Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HOME_ADDR1__c_LABEL">
+<source>Home Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HOME_ADDR2__c_description']}">
+<source>Home Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HOME_ADDR2__c_LABEL">
+<source>Home Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HOME_CITY__c_description']}">
+<source>Home City</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HOME_CITY__c_LABEL">
+<source>Home City</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HOME_PHONE__c_description']}">
+<source>Home Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HOME_PHONE__c_LABEL">
+<source>Home Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HOME_STATE__c_description']}">
+<source>Home State</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HOME_STATE__c_LABEL">
+<source>Home State</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HOME_ZIP__c_description']}">
+<source>Home Zip</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HOME_ZIP__c_LABEL">
+<source>Home Zip</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_HRID__c_description']}">
+<source>Hrid</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_HRID__c_LABEL">
+<source>Hrid</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_IM_ADDR1__c_description']}">
+<source>Im Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_IM_ADDR1__c_LABEL">
+<source>Im Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_IM_ADDR2__c_description']}">
+<source>Im Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_IM_ADDR2__c_LABEL">
+<source>Im Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_INCLUDE_HOME_INFO__c_description']}">
+<source>Include Home Info</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_INCLUDE_HOME_INFO__c_LABEL">
+<source>Include Home Info</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_JOB_CODE__c_description']}">
+<source>Job Code</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_JOB_CODE__c_LABEL">
+<source>Job Code</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_JOB_DESC__c_description']}">
+<source>Job Desc</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_JOB_DESC__c_LABEL">
+<source>Job Desc</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_L_ADDR1__c_description']}">
+<source>L Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_L_ADDR1__c_LABEL">
+<source>L Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_L_ADDR2__c_description']}">
+<source>L Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_L_ADDR2__c_LABEL">
+<source>L Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_L_CITY__c_description']}">
+<source>L City</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_L_CITY__c_LABEL">
+<source>L City</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_L_PHONE__c_description']}">
+<source>L Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_L_PHONE__c_LABEL">
+<source>L Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_L_STATE__c_description']}">
+<source>L State</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_L_STATE__c_LABEL">
+<source>L State</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_L_ZIP__c_description']}">
+<source>L Zip</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_L_ZIP__c_LABEL">
+<source>L Zip</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_LASTNAME__c_description']}">
+<source>Lastname</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_LASTNAME__c_LABEL">
+<source>Lastname</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_MAILHOST__c_description']}">
+<source>Mailhost</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_MAILHOST__c_LABEL">
+<source>Mailhost</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_MIDDLENAME__c_description']}">
+<source>Middlename</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_MIDDLENAME__c_LABEL">
+<source>Middlename</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_MOBILE_PHONE__c_description']}">
+<source>Mobile Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_MOBILE_PHONE__c_LABEL">
+<source>Mobile Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_NICKNAME__c_description']}">
+<source>Nickname</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_NICKNAME__c_LABEL">
+<source>Nickname</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_ORIG_HIRE_DT__c_description']}">
+<source>Orig Hire Dt</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_ORIG_HIRE_DT__c_LABEL">
+<source>Orig Hire Dt</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_OUC__c_description']}">
+<source>OUC</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_OUC__c_LABEL">
+<source>OUC</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_OUC_DESCR__c_description']}">
+<source>OUC Descr</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_OUC_DESCR__c_LABEL">
+<source>OUC Descr</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PAGER_PHONE__c_description']}">
+<source>Pager Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PAGER_PHONE__c_LABEL">
+<source>Pager Phone</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PREF_FIRSTNAME__c_description']}">
+<source>Pref Firstname</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PREF_FIRSTNAME__c_LABEL">
+<source>Pref Firstname</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PREF_LASTNAME__c_description']}">
+<source>Pref Lastname</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PREF_LASTNAME__c_LABEL">
+<source>Pref Lastname</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PREF_MIDDLENAME__c_description']}">
+<source>Pref Middlename</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PREF_MIDDLENAME__c_LABEL">
+<source>Pref Middlename</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PREFERRED_DEPT__c_description']}">
+<source>Preferred Dept</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PREFERRED_DEPT__c_LABEL">
+<source>Preferred Dept</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PREFIX__c_description']}">
+<source>Prefix</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PREFIX__c_LABEL">
+<source>Prefix</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PREVIOUS_LASTNAME__c_description']}">
+<source>Previous Lastname</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PREVIOUS_LASTNAME__c_LABEL">
+<source>Previous Lastname</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PRIMARY_EMAIL__c_description']}">
+<source>Primary Email</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PRIMARY_EMAIL__c_LABEL">
+<source>Primary Email</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PRIMARY_ROLE__c_description']}">
+<source>Primary Role</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PRIMARY_ROLE__c_LABEL">
+<source>Primary Role</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_PRIVACY__c_description']}">
+<source>Privacy</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_PRIVACY__c_LABEL">
+<source>Privacy</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_REG_STATUS__c_description']}">
+<source>Reg Status</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_REG_STATUS__c_LABEL">
+<source>Reg Status</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SCH_NAME__c_description']}">
+<source>Sch Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SCH_NAME__c_LABEL">
+<source>Sch Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SCH_NAME2__c_description']}">
+<source>Sch Name2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SCH_NAME2__c_LABEL">
+<source>Sch Name2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SEX__c_description']}">
+<source>Sex</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SEX__c_LABEL">
+<source>Sex</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SHELL__c_description']}">
+<source>Shell</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SHELL__c_LABEL">
+<source>Shell</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SPOUSE__c_description']}">
+<source>Spouse</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SPOUSE__c_LABEL">
+<source>Spouse</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_STU_EMAIL_ADDR__c_description']}">
+<source>Stu Email Addr</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_STU_EMAIL_ADDR__c_LABEL">
+<source>Stu Email Addr</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_STUDENT_ID__c_description']}">
+<source>Student Id</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_STUDENT_ID__c_LABEL">
+<source>Student Id</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SUFFIX__c_description']}">
+<source>Suffix</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SUFFIX__c_LABEL">
+<source>Suffix</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_UID__c_description']}">
+<source>UID</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_UID__c_LABEL">
+<source>UID</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_USERNAME__c_description']}">
+<source>Username</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_USERNAME__c_LABEL">
+<source>Username</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_ADDR1__c_description']}">
+<source>W Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_ADDR1__c_LABEL">
+<source>W Addr1</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_ADDR2__c_description']}">
+<source>W Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_ADDR2__c_LABEL">
+<source>W Addr2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_BLDG_NAME__c_description']}">
+<source>W Bldg Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_BLDG_NAME__c_LABEL">
+<source>W Bldg Name</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_CITY__c_description']}">
+<source>W City</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_CITY__c_LABEL">
+<source>W City</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_FAX__c_description']}">
+<source>W Fax</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_FAX__c_LABEL">
+<source>W Fax</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_PHONE1__c_description']}">
+<source>W Phone1</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_PHONE1__c_LABEL">
+<source>W Phone1</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_PHONE2__c_description']}">
+<source>W Phone2</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_PHONE2__c_LABEL">
+<source>W Phone2</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_ROOM__c_description']}">
+<source>W Room</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_ROOM__c_LABEL">
+<source>W Room</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_STATE__c_description']}">
+<source>W State</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_STATE__c_LABEL">
+<source>W State</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_W_ZIP__c_description']}">
+<source>W Zip</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_W_ZIP__c_LABEL">
+<source>W Zip</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_WEB_SITE__c_description']}">
+<source>Web Site</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_WEB_SITE__c_LABEL">
+<source>Web Site</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_WORKING_TITLE__c_description']}">
+<source>Working Title</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_WORKING_TITLE__c_LABEL">
+<source>Working Title</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_ID_NUM__c_description']}">
+<source>ID NUM</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_ID_NUM__c_LABEL">
+<source>ID NUM</source>
+<target/>
+</trans-unit>
+<trans-unit id="${adfBundle['oracle.adf.businesseditor.model.util.BaseRuntimeResourceBundle']['persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.UD_LDAPDATA_SERVER__c_description']}">
+<source>Server</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.UD_LDAPDATA_SERVER__c_LABEL">
+<source>Server</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.LDAPDATAUserForm.entity.LDAPDATAUserFormEO.serviceaccount__c_LABEL">
+<source>Service Account</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.CustomAttribute__c_LABEL">
+<source>Custom Attribute</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.CustomAttribute__c_LABEL">
+<source>Custom Attribute</source>
+<target/>
+</trans-unit>
+<trans-unit id="persdef.sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.PolandSpringWater__c_LABEL">
+<source>Poland Spring Water What</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.PolandSpringWater__c_LABEL">
+<source>Poland Spring Water What</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.usr_udf_fsdir__c_LABEL">
+<source>usr_udf_fsdir</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.usr_udf_fsdir__c_LABEL">
+<source>usr_udf_fsdir</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.usr_udf_fsmode__c_LABEL">
+<source>usr_udf_fsmode</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.usr_udf_fsmode__c_LABEL">
+<source>usr_udf_fsmode</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.usr_udf_fsmountpt__c_LABEL">
+<source>usr_udf_fsmountpt</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.usr_udf_fsmountpt__c_LABEL">
+<source>usr_udf_fsmountpt</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.usr_udf_fstype__c_LABEL">
+<source>usr_udf_fstype</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.usr_udf_fstype__c_LABEL">
+<source>usr_udf_fstype</source>
+<target/>
+</trans-unit>
+<trans-unit id="sessiondef.oracle.iam.ui.runtime.form.model.user.entity.userEO.usr_udf_uid__c_LABEL">
+<source>usr_udf_uid</source>
+<target/>
+</trans-unit>
+<trans-unit id="oracle.iam.ui.common.model.user.entity.UserEO.usr_udf_uid__c_LABEL">
+<source>usr_udf_uid</source>
+<target/>
+</trans-unit>
+</body>
+</file>
+</xliff>

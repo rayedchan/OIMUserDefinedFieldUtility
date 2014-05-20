@@ -17,15 +17,22 @@ import oracle.iam.platform.authz.exception.AccessDeniedException;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import project.rayedchan.services.tcOIMDatabaseConnection;
-import project.rayedchan.utilities.UDFUtility;
+import project.rayedchan.utilities.HelperUtility;
+import project.rayedchan.utilities.BackendUDFUtility;
 
 /**
  * @author rayedchan
+ * This is a test driver class to generate the UDF XML MetaData file. 
+ * The UDF information is supplied by a CSV file from user.  
+ * 
+ * The generated XML file can be imported into OIM via Deployment Manager. 
+ * OIM will handle the column creation in the backend UDF (E.g. columns in OIM.USR Table)
  */
-public class OIMUserDefinedFieldUtility 
+public class UserDefinedFieldBackendTestDriver 
 {
-    // For User Defined Field in the Backend
+    // OIM Environment specific variables
     public static final String OIM_HOSTNAME = "localhost";
     public static final String OIM_PORT = "14000";
     public static final String OIM_PROVIDER_URL = "t3://"+ OIM_HOSTNAME + ":" + OIM_PORT;
@@ -33,14 +40,14 @@ public class OIMUserDefinedFieldUtility
     public static final String OIM_PASSWORD = "Password1";
     public static final String OIM_CLIENT_HOME = "/home/oracle/Desktop/oimclient";
     public static final String AUTHWL_PATH = OIM_CLIENT_HOME + "/conf/authwl.conf";
+    
+    // Path of generated XML to be output to
     public static final String DESTINATION_PATH_OF_UDF_METADATA = "/home/oracle/Desktop/udf_util.xml";
+    
+    // Path of the CSV 
     public static final String SOURCE_PATH_OF_CSV_FILE = "/home/oracle/NetBeansProjects/OIMUserDefinedFieldUtility/sample_data/UDF_Metadata/csv/sample_UDFs_2.csv";
     
-    // For User Defined Field in the User Form (Front-end)
-    public static final String SOURCE_PATH_OF_COLUMNNAME_TO_DISPLAYNAME_MAPPING_CSV_FILE = "/home/oracle/NetBeansProjects/OIMUserDefinedFieldUtility/sample_data/userForm/csv/mapping.csv";
-    public static final String PATH_TO_BIZ_EDITOR_BUNDLE_XLF_FILE = "/home/oracle/Desktop/sysadmin/xliffBundles/oracle/iam/ui/runtime/BizEditorBundle.xlf";
-    
-    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcDataSetException, tcDataAccessException, IOException 
+    public static void main(String[] args) throws LoginException, AccessDeniedException, UserSearchException, ParserConfigurationException, TransformerConfigurationException, TransformerException, XPathExpressionException, tcDataSetException, tcDataAccessException, IOException, SAXException 
     {
         OIMClient oimClient = null;
         tcLookupOperationsIntf lookupOps = null;
@@ -48,12 +55,6 @@ public class OIMUserDefinedFieldUtility
         
         try
         {
-            /*
-             * ========================================================
-             * UDF Metadata Generation (Backend creation in USR Table)
-             * ========================================================
-             */
-
             // Set system properties required for OIMClient
             System.setProperty("java.security.auth.login.config", AUTHWL_PATH);
             System.setProperty("APPSERVER_TYPE", "wls");  
@@ -77,28 +78,17 @@ public class OIMUserDefinedFieldUtility
             CSVFormat format = CSVFormat.DEFAULT.withHeader().withDelimiter(',');
             parser = new CSVParser(new FileReader(SOURCE_PATH_OF_CSV_FILE), format);
             
+            // Create UDFUtility Object
+            BackendUDFUtility udfUtil = new BackendUDFUtility();
+            
             // Get the final UDF document
-            Document doc = UDFUtility.buildUDFDocument(dbConnection, lookupOps, parser);
+            Document doc = udfUtil.buildUDFDocument(dbConnection, lookupOps, parser);
             
             // Create XML file
-            UDFUtility.createXMLFile(doc, DESTINATION_PATH_OF_UDF_METADATA);
+            HelperUtility.createXMLFile(doc, DESTINATION_PATH_OF_UDF_METADATA);
 
             // Print Document object to String
-            //System.out.println(UDFUtility.parseDocumentIntoStringXML(doc));
-            
-            // User Form
-            // /xliffBundles/oracle/iam/ui/runtime/BizEditorBundle.xlf
-            
-            
-            
-            /*
-             * ======================================================
-             * User Form (UDF Display name and Column Name Mappings)
-             * ======================================================
-             */
-            
-            
-            
+            //System.out.println(HelperUtility.parseDocumentIntoStringXML(doc));
         } 
             
         finally
